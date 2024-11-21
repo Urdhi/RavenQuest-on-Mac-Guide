@@ -53,7 +53,7 @@ Follow these steps to create a Wine-prefix for your game with the necessary depe
 
 ![Select the package](.assets/create-wine-prefix_04.png)
 
-## Create Wine-Prefix
+## Installing RavenQuest
 Follow these steps to install and set up **RavenQuest**:
 
  - Download the game installer (EXE file) from [RavenQuest’s website](https://ravenquest.io).
