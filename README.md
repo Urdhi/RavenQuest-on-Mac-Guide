@@ -1,7 +1,7 @@
 # How to play RavenQuest on Macintosh using Wine
 
 *A guide written by Urdhi for the RavenQuest community :heart:*  
-*1.0.0 2024-11-01*
+*1.1.0 2024-11-27*
 
 ![How to play RavenQuest on Mac](.assets/header.png)
 
@@ -9,8 +9,9 @@
 1. [Prerequisites](#prerequisites)
 2. [Installing Wine](#installing-wine)
 3. [Creating Wine-Prefix](#creating-wine-prefix)
-4. [Installing RavenQuest](#installing-ravenquest)
-5. [Creating Shortcut](#creating-shortcut)
+4. [Installing DXVK into Wine-Prefix](#installing-dxvk-into-wine-prefix)
+5. [Installing RavenQuest](#installing-ravenquest)
+6. [Creating Shortcut](#creating-shortcut)
 
 
 ## Prerequisites
@@ -53,18 +54,42 @@ Follow these steps to create a Wine-prefix for your game with the necessary depe
 
 ![Select the package](.assets/create-wine-prefix_04.png)
 
+
+## Installing DXVK into Wine-Prefix
+To enhance performance (reduce power consumption) and resolve certain graphical issues (e.g. black world map), DXVK should be installed and activated in the Wine prefix. Follow these steps:
+
+- Download the latest DXVK package for Mac from this [GitHub repository](https://github.com/Gcenx/DXVK-macOS/releases/).
+
+- Extract the downloaded package.  
+ **Note:** *Be mindful of the reversed directory names for 32-bit and 64-bit files in the following steps!*
+
+  - Copy the contents of the `x32` folder to `~/.local/share/wineprefixes/RavenQuest/drive_c/windows/syswow64`
+  - Copy the contents of the `x64` folder to `~/.local/share/wineprefixes/RavenQuest/drive_c/windows/system32`
+
+
+- Open Winetricks and select `Run winecfg` to launch the Wine configuration dialog (a Windows-like settings window).
+
+- Navigate to the `Libraries` tab.
+
+- Add the libraries `d3d11` and `d3d10core` to the list.
+
+- Click `Apply` and close the configuration window.
+
+![Wine configuration](.assets/installing_dxvk_into_wine-prefix_01.png)
+
+
 ## Installing RavenQuest
 Follow these steps to install and set up **RavenQuest**:
 
- - Download the game installer (EXE file) from [RavenQuest’s website](https://ravenquest.io).
- - In Winetricks scroll down in the list of the previously created prefix and select `Run an arbitrary executable (.exe/.msi/.msu)` and click on OK:
+- Download the game installer (EXE file) from [RavenQuest’s website](https://ravenquest.io).
+- In Winetricks scroll down in the list of the previously created prefix and select `Run an arbitrary executable (.exe/.msi/.msu)` and click on OK:
 
- ![Run installater](.assets/installing-ravenquest_01.png)
+![Run installer](.assets/installing-ravenquest_01.png)
 
- - Run the RavenQuest installer, configure it as needed. If you don't uncheck *launch game* the game will immediately launch and crash, that's fine.
+- Run the RavenQuest installer, configure it as needed. If you don't uncheck *launch game* the game will immediately launch and crash, that's fine.
 
- - To start the game select in Winetricks `Run an arbitrary executable (.exe/.msi/.msu)` again, navigate to your prefix and select *ravenquest_dx.exe*. Repeat this step until the automatic client patching on startup is done.  
-  If the default settings are unchanged, the prefix is located in the folder `~/.local/share/wineprefixes/RavenQuest/drive_c/Program Files (x86)/Tavernlight Games/RavenQuest`. To display the hidden `.local` folder in the Finder, press `Shift` + `Command` + `. (Dot)`.
+- To start the game select in Winetricks `Run an arbitrary executable (.exe/.msi/.msu)` again, navigate to your prefix and select *ravenquest_dx.exe*. Repeat this step until the automatic client patching on startup is done.  
+If the default settings are unchanged, the prefix is located in the folder `~/.local/share/wineprefixes/RavenQuest/drive_c/Program Files (x86)/Tavernlight Games/RavenQuest`. To display the hidden `.local` folder in the Finder, press `Shift` + `Command` + `. (Dot)`.
 
 
 ## Creating Shortcut
