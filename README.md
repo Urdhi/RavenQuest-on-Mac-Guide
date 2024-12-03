@@ -1,7 +1,7 @@
 # How to play RavenQuest on Macintosh using Wine
 
 *A guide written by Urdhi for the RavenQuest community :heart:*  
-*1.1.0 2024-11-27*
+*1.1.1 2024-12-03*
 
 ![How to play RavenQuest on Mac](.assets/header.png)
 
@@ -18,7 +18,7 @@
 Before getting started, make sure you meet these requirements:
 
 1. **A Macintosh**:
-  This guide is tested on a MacBook Pro 2019 with Intel Core i9 processor and macOS 15.1, *Apple Silicon processor is not tested yet*.
+  This guide is tested on a MacBook Pro 2019 with Intel Core i9 processor and macOS 15.1 but it should work on all including Apple Silicon.
 
 2. **Homebrew**:
   The Missing Package Manager for macOS, get it from [https://brew.sh](https://brew.sh).
