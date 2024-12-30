@@ -1,9 +1,9 @@
-# How to play RavenQuest on Macintosh using Wine
+# How to play RavenQuest on macOS using Wine
 
 *A guide written by Urdhi for the RavenQuest community :heart:*  
-*1.1.1 2024-12-03*
+*1.1.2 2024-12-30*
 
-![How to play RavenQuest on Mac](.assets/header.png)
+![How to play RavenQuest on Mac](.assets/header.webp)
 
 # Table of Contents
 1. [Prerequisites](#prerequisites)
@@ -13,18 +13,21 @@
 5. [Installing RavenQuest](#installing-ravenquest)
 6. [Creating Shortcut](#creating-shortcut)
 
+If the setup seems too complicated for you or you already own CrossOver, I have created a separate guide for this:  
+[https://github.com/Urdhi/RavenQuest-on-Mac-CrossOver-Guide](https://github.com/Urdhi/RavenQuest-on-Mac-CrossOver-Guide)
+
 
 ## Prerequisites
 Before getting started, make sure you meet these requirements:
 
 1. **A Macintosh**:
-  This guide is tested on a MacBook Pro 2019 with Intel Core i9 processor and macOS 15.1 but it should work on all including Apple Silicon.
-
+  This guide is tested on a MacBook Pro 2019 with an Intel Core i9 processor and macOS 15.1, but it should work on all Macs, including those with Apple Silicon.
+  However, players on Apple Silicon devices have reported freezes after 30-60 minutes of gameplay.
+  Using [CrossOver](https://github.com/Urdhi/RavenQuest-on-Mac-CrossOverGuide) appears to improve stability on these devices.
 2. **Homebrew**:
   The Missing Package Manager for macOS, get it from [https://brew.sh](https://brew.sh).
 
 3. **Internet Connection**: A stable connection is necessary for downloading Wine and the game itself.
-
 
 ## Installing Wine
 Install Wine, Winetricks and Zenity (GUI framework for running Winetricks) via Brew:
@@ -127,7 +130,11 @@ WINEPREFIX="$WINE_PREFIX" /usr/local/bin/wine64 "$WINE_EXECUTABLE"
 
 ---
 
+
+Visit my community page [https://ravenquest.de](https://ravenquest.de)
+
 *I hope this guide helps you and makes it easy for you to enjoy this fantastic game on your Mac. :apple: :heart:  
 If you have any questions, please feel free to contact me in the Discord!*
 
-*Spread the word, but please mention me as the author!*
+
+*Spread the word but mention me as the author please!*  
